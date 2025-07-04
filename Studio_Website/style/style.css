@@ -1,0 +1,133 @@
+*{
+  margin:0;
+  padding: 0;
+}
+
+.header{
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9,30, 0.7),rgba(4, 9,30, 0.7)),url(../images/banner1.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+}
+nav{
+  display: flex;
+  padding: 1% 3%;
+  justify-content: space-between;
+  align-items: center;
+
+}
+nav img{
+  width: 250px;
+}
+
+.nav-links{
+  flex:1;
+  text-align: right;
+}
+
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.nav-links ul li a{
+  color: 		#20b2aa;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.nav-links ul li a::after{
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.nav-links ul li a:hover::after{
+  width: 100%;
+}
+.text-box{
+  width: 90%;
+  position: fixed;
+  color: 	#fffafa;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%,50%);
+  text-align: center;
+}
+
+.text-box h1 ins{
+  font-size: 100px;
+  border-color: 		#2f4f4f;
+  border-style: outset;
+  border-collapse:separate;
+  border-width: 15px;
+}
+
+.text-box p {
+  margin: 10px 0 40px;
+  font-size: 25px;
+  color:	#f0f8ff ;
+
+}
+.hero-btn{
+  display: inline-block;
+  text-decoration: none;
+  color: #20b2aa	;
+  border: 5px solid #20b2aa
+  padding: 12px 34px;
+  font-size: 25px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+.hero-btn:hover{
+  border:1px solid #f44336;
+  background: #f44336
+  transition:5s;
+}
+
+nav .fa{
+  display: none;
+}
+@media (max-width: 700px){
+  .text-box h1 ins {
+    font-size: 25px;
+  }
+  .text-box p{
+    font-size: 15px;
+  }
+  .nav-links ul li{
+    display:block;
+    font-size: 10px;
+  }
+  .nav-links{
+    position: absolute;
+    background: #808080;
+    height: 100vh;
+    width: 200px;
+    top:0;
+    right: -200px;
+    text-align: left;
+    z-index: 2;
+    transition: 1s;
+  }
+  nav .fa{
+    display:block;
+    color: black;
+    margin:20px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  .nav-links ul{
+    padding: 30pxs;
+  }
+}
